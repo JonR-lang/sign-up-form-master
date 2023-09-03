@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 74%) ;
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%) ;
+    --grayishBlue: hsl(246, 25%, 77%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url(./images/bg-intro-desktop.png);
+    background-color: var(--red);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 100vh;
+    width: 65%;
+    margin: 0 auto;
+    
+}
+
+.wrapper .section-1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-1 > p:first-child {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: white;
+}
+
+.section-1 > p:last-child {
+    font-size: .8rem;
+    color: white;
+}
+
+.wrapper .section-2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.section-2 > button {
+    background-color: var(--blue);
+    color: white;
+    padding: 16px;
+    border-radius: 7px;
+    border: none;
+    font-size: .8rem;
+    box-shadow: 0 5px rgb(0, 0, 0, 0.2);
+    transition: all ease-in-out 300ms;
+}
+
+.section-2 > button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.section-2 > button span {
+    font-weight: 600;
+}
+
+#freetrial-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    padding: 32px;
+    border-radius: 7px;
+    box-shadow: 0 5px rgb(0, 0, 0, 0.2);
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: .85rem;
+    font-weight: 500;
+    border: 1px solid var(--grayishBlue);
+    border-radius: 5px;
+}
+
+.input-field input.error {
+    border: 2px solid var(--red);
+}
+
+.input-field input::placeholder {
+    font-size: .8rem;
+    font-weight: 600;
+    
+}
+
+.input-field input:focus {
+    border: 1px solid black;
+}
+
+.input-field p {
+    text-align: right;
+    font-size: .6rem;
+    padding: 3px 0;
+    color: red;
+    display: none;
+}
+
+
+.icon-error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-60%, 40%);
+    display: none;
+}
+
+#freetrial-form > #free-trial-btn {
+    background-color: var(--green);
+    box-shadow: inset 0px -3px rgb(0, 0, 0, 0.2);
+    color: white;
+    padding: 15px 0;
+    border-radius: 7px;
+    border: none;
+    font-size: .8rem;
+    text-transform: uppercase;
+    transition: all ease-in-out 300ms;
+}
+#freetrial-form > #free-trial-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#freetrial-form > p {
+    font-size: .5rem;
+    text-align: center;
+    margin-top: -8px;
+    color: var(--grayishBlue);
+    font-weight: 500;
+}
+
+#freetrial-form > p > span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+@media screen and (max-width:900px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        min-height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        
+    }
+
+    .section-1 {
+        margin-top: 50px;
+    }
+    .section-1 > p:first-child {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        color: white;
+        text-align: center;
+    }
+    
+    .section-1 > p:last-child {
+        font-size: .9rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        color: white;
+        text-align: center;
+    }
+    
+    .input-field input {
+        padding: 15px 15px;
+    }
+    
+}
